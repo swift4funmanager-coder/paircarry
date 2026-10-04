@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PairCarry – Privacy Policy</title>
+  <link rel="icon" href="app-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      var page = "privacy.html";
+      var langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"]);
+      var pick = "en";
+      for (var i = 0; i < langs.length; i++) {
+        var tag = String(langs[i]).toLowerCase();
+        if (/^zh-(hans|cn|sg|my)/.test(tag)) { pick = "zh-Hans"; break; }
+        if (/^zh/.test(tag)) { pick = "zh-Hant"; break; }
+        if (/^ja/.test(tag)) { pick = "ja"; break; }
+        if (/^en/.test(tag)) { pick = "en"; break; }
+      }
+      location.replace(pick + "/" + page + location.hash);
+    })();
+  </script>
+</head>
+<body>
+  <main class="picker">
+    <picture><source srcset="app-icon-dark.png" media="(prefers-color-scheme: dark)"><img class="app-icon" src="app-icon.png" width="88" height="88" alt=""></picture>
+    <h1>好好傳 · PairCarry</h1>
+    <ul>
+        <li><a href="zh-Hant/privacy.html" lang="zh-Hant">繁體中文</a></li>
+        <li><a href="zh-Hans/privacy.html" lang="zh-Hans">简体中文</a></li>
+        <li><a href="en/privacy.html" lang="en">English</a></li>
+        <li><a href="ja/privacy.html" lang="ja">日本語</a></li>
+    </ul>
+  </main>
+</body>
+</html>
